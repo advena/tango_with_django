@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block body %}
+<div class='hero-unit'>
+  <h1>About Rango</h1>
+  <p>This is <strong>Rango's about page</strong></p>
+  <p>You have visited the site on <strong>{{ visits }} ocassion{{ visits|pluralize }}</strong></p>
+  <p>Here's a picture of Python!</p>
+  <img src="{% static 'python.jpeg' %}" alt='Python picture' />
+</div>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% block sidebar %}
+
+{% if pages %}
+  <ul>
+			{% for page in pages %}
+				<li><a href='/rango/goto/?page_id={{page.id}}'>{{page.title}}</a> - ({{page.views}} view{{page.views|pluralize}})</li>
+			{% endfor %}
+  </ul>
+{% else %}
+    <strong>No pages currently at this category!</strong>
+{% endif %}
+
+{% endblock %}
